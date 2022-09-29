@@ -1,6 +1,6 @@
 package com.mysite.sbb.question.domain;
 
-import com.mysite.sbb.answer.Answer;
+import com.mysite.sbb.answer.domain.Answer;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,7 +16,7 @@ public class Question {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(length=200)
+    @Column(length = 200)
     private String subject;
 
     @Column(columnDefinition = "TEXT")

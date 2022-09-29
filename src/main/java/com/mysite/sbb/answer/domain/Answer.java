@@ -1,8 +1,9 @@
-package com.mysite.sbb.answer;
+package com.mysite.sbb.answer.domain;
 
 import com.mysite.sbb.question.domain.Question;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -17,6 +18,8 @@ public class Answer {
 
     @Column(columnDefinition = "TEXT")
     private String content;
+
+    @CreatedDate
     private LocalDateTime createDate;
 
     @ManyToOne
